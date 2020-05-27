@@ -3,7 +3,8 @@
 ########################################
 
 variable "name" {
-  description = "Moniker to apply to all resources in the module"
+  default = "securityhub"
+  description = "Moniker to apply to or prefix all resources in the module"
   type        = string
 }
 
