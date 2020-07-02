@@ -1,11 +1,14 @@
-# terraform-aws-securityhub-to-sns [![](https://github.com/rhythmictech/terraform-aws-securityhub-to-sns/workflows/pre-commit-check/badge.svg)](https://github.com/rhythmictech/terraform-aws-securityhub-to-sns/actions) <a href="https://twitter.com/intent/follow?screen_name=RhythmicTech"><img src="https://img.shields.io/twitter/follow/RhythmicTech?style=social&logo=RhythmicTech" alt="follow on Twitter"></a>
-Template repository for terraform modules. Good for any cloud and any provider.
+# terraform-aws-securityhub-to-sns [![](https://github.com/rhythmictech/terraform-aws-securityhub-to-sns/workflows/pre-commit-check/badge.svg)](https://github.com/rhythmictech/terraform-aws-securityhub-to-sns/actions) <a href="https://twitter.com/intent/follow?screen_name=RhythmicTech"><img src="https://img.shields.io/twitter/follow/RhythmicTech?style=social&logo=twitter" alt="follow on Twitter"></a>
+Use CloudWatch to send SecurityHub events to SNS
 
 ## Example
 Here's what using the module will look like
-```
+
+```hcl
 module "example" {
-  source = "rhythmictech/terraform-aws-securityhub-to-sns
+  source  = "rhythmictech/terraform-aws-securityhub-to-sns/aws"
+  version = "0.0.1"
+  
   custom_action_notification_arn    = "arn:aws:sns:us-east-1:012345678912:CreateTicket"
   imported_finding_notification_arn = "arn:aws:sns:us-east-1:012345678912:NotifySlack"
 }
