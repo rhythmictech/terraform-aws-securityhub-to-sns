@@ -8,7 +8,7 @@ Here's what using the module will look like
 module "example" {
   source  = "rhythmictech/terraform-aws-securityhub-to-sns/aws"
   version = "0.0.1"
-  
+
   custom_action_notification_arn    = "arn:aws:sns:us-east-1:012345678912:CreateTicket"
   imported_finding_notification_arn = "arn:aws:sns:us-east-1:012345678912:NotifySlack"
 }
